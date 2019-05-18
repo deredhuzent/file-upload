@@ -15,3 +15,14 @@ req.query -->> object containing a property for each query string parameter in t
 req.file -->> multer adds the body object to the req, but also, adds a file object with the multipart data in it. 
     npm i multer  <<-- you have to intsall
 
+
+When we are working with HTML, by default you can send plain text over the requests to our server. 
+An image is not plain text.
+
+ENCTYPE <<--- allows the form to be able to upload files to the server. 
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="file" name="photo">
+    <input type="submit" value="Save">
+  </form>
