@@ -1,0 +1,17 @@
+req-->> HTTP request
+res -->> HTTP response
+
+req.body -->> contains key-value pairs of data submittedin the request body.
+               Middlewares as body-parser and multer populate it.
+
+req.params -->> object containing properties mapped o the name route "parameters"
+                object default to {}
+      route:     /user/:name
+      availble as:     req.params.name
+
+req.query -->> object containing a property for each query string parameter in the route.
+              if ther is no query string, it is the empty body {}
+
+req.file -->> multer adds the body object to the req, but also, adds a file object with the multipart data in it. 
+    npm i multer  <<-- you have to intsall
+
